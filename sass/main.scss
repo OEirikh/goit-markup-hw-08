@@ -1,0 +1,34 @@
+@import "./utils/_variables.scss";
+@import "./utils/placeholders";
+
+@import "./base/container";
+@import "./base/common";
+@import "./base/hidden";
+
+@import "./components/logo";
+@import "./components/menu-nav";
+@import "./components/menu-contacts";
+@import "./components/buttons";
+@import "./components/features-list";
+@import "./components/direction-cards-set";
+@import "./components/team-cards-set";
+@import "./components/socials";
+@import "./components/clients";
+@import "./components/address";
+@import "./components/subsсribe-form";
+@import "./components/filter";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/form";
+@import "./components/agreement-conditions";
+@import "./components/portfolio-list";
+@import "./components/overlay";
+
+@import "./layouts/section";
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/direction";
+@import "./layouts/team";
+@import "./layouts/footer";
+@import "./layouts/portfolio";

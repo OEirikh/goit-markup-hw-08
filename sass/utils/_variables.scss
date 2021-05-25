@@ -1,0 +1,31 @@
+:root {
+  --text-main-col: #757575;
+  --alt-text-col: #ffffff99;
+  --logo-web-col: #2196f3;
+  --logo-studio-col: #000000;
+  --logo-studio-alt-col: #ffffff;
+  --title-main-col: #ffffff;
+  --title-sub-col: #212121;
+  --acent-col: #2196f3;
+  --portfolio-border: #eeeeee;
+  --header-border: #ececec;
+  --icon-col: #afb1b8;
+
+  --bg-head: #ffffff;
+  --bg-hero: #2f303a;
+  --bg-team: #f5f4fa;
+  --bg-foot: #2f303a;
+
+  --main-font: "Roboto", sans-serif;
+  --title-font: "Raleway", sans-serif;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --box-shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-portfolio-card: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --box-shadow-btn: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --box-shadow-filter-btn: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}

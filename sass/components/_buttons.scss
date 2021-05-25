@@ -1,0 +1,67 @@
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background: var(--acent-col);
+  border: none;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-btn);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn__hero {
+  padding: 10px 32px;
+  color: var(--title-main-col);
+  margin: 0px auto;
+}
+
+.btn__subsсribe {
+  padding: 10px 62px 10px 29px;
+  width: 200px;
+  height: 50px;
+  color: var(--logo-studio-alt-col);
+}
+
+.btn__modal-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px;
+  width: 200px;
+  height: 50px;
+  color: var(--logo-studio-alt-col);
+  transition: background-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  @extend %flex-center;
+  top: 8px;
+  left: 490px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--bg-head);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-close__svg {
+  fill: var(--logo-studio-col);
+  transition: fill 250ms var(--timing-function);
+
+  .btn-close:hover &,
+  .btn-close:focus & {
+    fill: var(--acent-col);
+  }
+}

@@ -1,0 +1,38 @@
+.menu-nav {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.menu-nav__item {
+  display: flex;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.menu-nav__link {
+  padding: 32px 0px 32px 0px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-sub-col);
+}
+
+.menu-nav__link--current {
+  color: var(--acent-col);
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--acent-col);
+    border-radius: 2px;
+  }
+}

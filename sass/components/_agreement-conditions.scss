@@ -1,0 +1,46 @@
+.agreement-conditions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 36px;
+  padding-right: 11px;
+  margin-bottom: 30px;
+}
+
+.agreement-conditions__label {
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-sub-col);
+    border-radius: 2px;
+    transition: border-color 250ms var(--timing-function),
+      background-color 250ms var(--timing-function);
+  }
+}
+
+.agreement-conditions__input:checked + .agreement-conditions__label::after {
+  border: none;
+  background-image: url(../images/chek.svg);
+  background-size: 11px 8px;
+  background-position: 3px 4px;
+  background-repeat: no-repeat;
+  background-color: var(--acent-col);
+}
+
+.agreement-conditions__input:focus + .agreement-conditions__label::after {
+  border-color: var(--acent-col);
+}
+
+.agreement-conditions__link {
+  margin-left: auto;
+  color: var(--acent-col);
+}

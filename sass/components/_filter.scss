@@ -1,0 +1,32 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filtr__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter__btn {
+  display: inline-block;
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-sub-col);
+  background-color: var(--bg-team);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--acent-col);
+    color: var(--title-main-col);
+    box-shadow: var(--box-shadow-filter-btn);
+  }
+}

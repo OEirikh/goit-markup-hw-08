@@ -1,0 +1,25 @@
+.features-list {
+  @extend %flex-wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.features-list__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+
+.features-list__icon {
+  @extend %flex-center;
+  margin-bottom: 30px;
+  background-color: var(--bg-team);
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.features-list__cvg {
+  width: 70px;
+  height: 70px;
+}

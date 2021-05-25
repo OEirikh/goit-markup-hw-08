@@ -1,0 +1,33 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--bg-foot);
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-main-col);
+  margin-bottom: 20px;
+}
+
+.footer__address-block {
+  width: calc(100% / 12 * 3);
+}
+
+.footer__social-block {
+  padding-top: 12px;
+  width: calc(100% / 12 * 3);
+}
+
+.footer__subscribe-block {
+  padding-top: 12px;
+  width: calc(100% / 12 * 6);
+}

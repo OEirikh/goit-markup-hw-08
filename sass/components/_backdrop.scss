@@ -1,0 +1,22 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms var(--timing-function),
+    transform 250ms var(--timing-function);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: opacity 300ms var(--timing-function),
+    visibility 300ms var(--timing-function),
+    transform 300ms var(--timing-function);
+}

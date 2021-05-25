@@ -1,0 +1,16 @@
+.address {
+  font-style: inherit;
+  margin-top: 20px;
+}
+
+.address__item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.address__text {
+  color: var(--title-main-col);
+}
+
+.address__text--contacts {
+  @extend %alt-col;
+}
