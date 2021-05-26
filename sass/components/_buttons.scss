@@ -16,6 +16,7 @@
   padding: 10px 32px;
   color: var(--title-main-col);
   margin: 0px auto;
+  display: block;
 }
 
 .btn__subsсribe {
@@ -64,4 +65,33 @@
   .btn-close:focus & {
     fill: var(--acent-col);
   }
+}
+
+.btn-menu {
+  display: inline-flex;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-menu__cvg {
+}
+
+.btn-menu__icon-menu {
+}
+
+.btn-menu__icon-cross {
+  display: none;
+}
+
+.btn-menu.is-open .btn-menu__icon-cross {
+  display: block;
+}
+
+.btn-menu.is-open .btn-menu__icon-menu {
+  display: none;
 }

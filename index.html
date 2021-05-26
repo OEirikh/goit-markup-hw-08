@@ -53,13 +53,19 @@
           </a>
         </li>
       </ul>
+      <button class="btn-menu" type="button" aria-expanded="false" data-menu-button>
+        <svg class="btn-menu__cvg" width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use class="btn-menu__icon-menu" href="./images/sprite.svg#icon-menu"></use>
+          <use class="btn-menu__icon-cross" href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
     </div>
   </header>
   <main>
 
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero__container">
+      <div class="container">
         <h1 class="hero__title">
           Эффективные решения<br />
           для вашего бизнеса
@@ -500,6 +506,7 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
