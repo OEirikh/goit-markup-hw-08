@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 
-<body>
+<body data-menu-page>
   <!--Header-->
   <header class="header">
     <div class="container header__container">
@@ -53,12 +53,68 @@
           </a>
         </li>
       </ul>
-      <button class="btn-menu" type="button" aria-expanded="false" data-menu-button>
-        <svg class="btn-menu__cvg" width="40" height="40" aria-label="Переключатель мобильного меню">
+
+      <button class="btn-menu" type="button" aria-expanded="false" aria-controls="mob-menu" data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
           <use class="btn-menu__icon-menu" href="./images/sprite.svg#icon-menu"></use>
           <use class="btn-menu__icon-cross" href="./images/sprite.svg#icon-close"></use>
         </svg>
       </button>
+
+      <div class="mob-menu" id="mob-menu" data-menu>
+
+        <nav>
+          <ul class="list">
+            <li class="mob-menu__item-nav">
+              <a class="mob-menu__link link" href="./index.html">Студия</a>
+            </li>
+            <li class="mob-menu__item-nav">
+              <a class="mob-menu__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mob-menu__item-nav link">
+              <a class="mob-menu__link link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <ul class="mob-menu__list-contact list">
+            <li class="mob-menu__item-contact">
+              <a href="" class="mob-menu__link-contact link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-menu__item-contact">
+              <a href="" class="mob-menu__link-contact mob-menu__link-contact--small-text link"
+                href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="list mob-menu__list-social">
+            <li class="mob-menu__item-social">
+              <a class="mob-menu__link-social link" href="https://www.instagram.com/" target="_blank"
+                rel="noopener noreferrer">
+                Instagram
+              </a>
+            </li>
+            <li class="mob-menu__item-social">
+              <a class="mob-menu__link-social link" href="https://twitter.com/" target="_blank"
+                rel="noopener noreferrer">
+                Twitter
+              </a>
+            </li>
+            <li class="mob-menu__item-social">
+              <a class="mob-menu__link-social link" href="https://www.facebook.com/" target="_blank"
+                rel="noopener noreferrer">
+                Facebook
+              </a>
+            </li>
+            <li class="mob-menu__item-social">
+              <a class="mob-menu__link-social link" href="https://www.linkedin.com/" target="_blank"
+                rel="noopener noreferrer">
+                Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </header>
   <main>

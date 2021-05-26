@@ -68,6 +68,7 @@
 }
 
 .btn-menu {
+  z-index: 99;
   display: inline-flex;
   border: none;
   padding: 0;
@@ -76,12 +77,11 @@
   @media screen and(min-width: 768px) {
     display: none;
   }
-}
 
-.btn-menu__cvg {
-}
-
-.btn-menu__icon-menu {
+  &:hover .btn-menu__cvg,
+  &:focus {
+    fill: var(--acent-col);
+  }
 }
 
 .btn-menu__icon-cross {

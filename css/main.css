@@ -74,7 +74,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 h1,
@@ -264,6 +263,94 @@ body {
   fill: currentColor;
 }
 
+.mob-menu {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  transition: right 250ms var(--timing-function);
+}
+
+.mob-menu.is-open {
+  right: 0;
+}
+
+.mob-menu__item-nav:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--title-sub-col);
+}
+
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--acent-col);
+}
+
+.mob-menu__list-contact {
+  margin-bottom: 64px;
+}
+
+.mob-menu__item-contact:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link-contact {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu__link-contact:hover {
+  color: var(--acent-col);
+}
+
+.mob-menu__link-contact--small-text {
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.mob-menu__list-social {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.mob-menu__item-social:not(:last-child) {
+  margin-right: 10px;
+  display: flex;
+}
+
+.mob-menu__item-social:not(:last-child):after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+}
+
+.mob-menu__link-social {
+  display: inline-block;
+  height: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--acent-col);
+}
+
 .btn {
   font-weight: 700;
   font-size: 16px;
@@ -333,6 +420,7 @@ body {
 }
 
 .btn-menu {
+  z-index: 99;
   display: inline-flex;
   border: none;
   padding: 0;
@@ -344,6 +432,10 @@ body {
   .btn-menu {
     display: none;
   }
+}
+
+.btn-menu:hover .btn-menu__cvg, .btn-menu:focus {
+  fill: var(--acent-col);
 }
 
 .btn-menu__icon-cross {
@@ -843,6 +935,7 @@ body {
 }
 
 .header__container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: start;
