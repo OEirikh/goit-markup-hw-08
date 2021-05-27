@@ -1073,8 +1073,16 @@ body {
 }
 
 .features {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--bg-head);
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 0px;
+  }
 }
 
 .features__title {
@@ -1085,6 +1093,13 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-sub-col);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: start;
+  }
 }
 
 .direction {
