@@ -49,7 +49,7 @@
   max-width: 480px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
@@ -457,13 +457,24 @@ body {
 .features-list__item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
 }
 
 .features-list__icon {
   margin-bottom: 30px;
   background-color: var(--bg-team);
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
 }
@@ -684,8 +695,15 @@ body {
 
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
 }
 
 .filtr__item:not(:last-child) {
@@ -695,6 +713,7 @@ body {
 .filter__btn {
   display: inline-block;
   padding: 6px 22px;
+  margin-bottom: 15px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -711,6 +730,12 @@ body {
   background-color: var(--acent-col);
   color: var(--title-main-col);
   box-shadow: var(--box-shadow-filter-btn);
+}
+
+@media screen and (min-width: 768px) {
+  .filter__btn {
+    margin-bottom: 0px;
+  }
 }
 
 .backdrop {

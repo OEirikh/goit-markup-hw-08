@@ -1,7 +1,12 @@
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .filtr__item:not(:last-child) {
@@ -11,6 +16,7 @@
 .filter__btn {
   display: inline-block;
   padding: 6px 22px;
+  margin-bottom: 15px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -28,5 +34,8 @@
     background-color: var(--acent-col);
     color: var(--title-main-col);
     box-shadow: var(--box-shadow-filter-btn);
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
   }
 }
