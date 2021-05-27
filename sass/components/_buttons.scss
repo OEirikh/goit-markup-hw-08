@@ -7,6 +7,7 @@
   border: none;
   border-radius: 4px;
   box-shadow: var(--box-shadow-btn);
+
   &:hover {
     cursor: pointer;
   }
@@ -42,10 +43,11 @@
 }
 
 .btn-close {
+  z-index: 100;
   position: absolute;
   @extend %flex-center;
   top: 8px;
-  left: 490px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -68,12 +70,13 @@
 }
 
 .btn-menu {
-  z-index: 99;
+  z-index: 20;
   display: inline-flex;
   border: none;
   padding: 0;
   margin-left: auto;
   background-color: transparent;
+
   @media screen and(min-width: 768px) {
     display: none;
   }

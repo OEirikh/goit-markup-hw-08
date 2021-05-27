@@ -74,6 +74,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 1px solid red;
 }
 
 h1,
@@ -264,6 +265,7 @@ body {
 }
 
 .mob-menu {
+  z-index: 19;
   position: fixed;
   top: 0;
   right: 100%;
@@ -395,9 +397,10 @@ body {
 }
 
 .btn-close {
+  z-index: 100;
   position: absolute;
   top: 8px;
-  left: 490px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -420,7 +423,7 @@ body {
 }
 
 .btn-menu {
-  z-index: 99;
+  z-index: 20;
   display: inline-flex;
   border: none;
   padding: 0;
@@ -692,6 +695,7 @@ body {
 }
 
 .backdrop {
+  z-index: 50;
   position: fixed;
   top: 0;
   left: 0;
@@ -717,20 +721,43 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  min-width: 528px;
   background-color: var(--bg-head);
   box-shadow: var(--box-shadow-card);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 469px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 1099px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+  }
 }
 
 .modal__title {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 1199px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -803,11 +830,15 @@ body {
 .agreement-conditions {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: start;
-  padding-left: 36px;
-  padding-right: 11px;
+  padding-left: 24px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1199px) {
+  .agreement-conditions {
+    padding-left: 36px;
+    padding-right: 11px;
+  }
 }
 
 .agreement-conditions__label {
@@ -818,7 +849,7 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  left: 14px;
+  left: 2px;
   transform: translateY(-50%);
   display: block;
   width: 16px;
@@ -826,6 +857,25 @@ body {
   border: 2px solid var(--title-sub-col);
   border-radius: 2px;
   transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+}
+
+@media screen and (min-width: 1199px) {
+  .agreement-conditions__label::after {
+    eft: 14px;
+  }
+}
+
+.agreement-conditions__text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1199px) {
+  .agreement-conditions__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .agreement-conditions__input:checked + .agreement-conditions__label::after {

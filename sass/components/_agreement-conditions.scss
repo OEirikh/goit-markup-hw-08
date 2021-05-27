@@ -1,11 +1,15 @@
 .agreement-conditions {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: start;
-  padding-left: 36px;
-  padding-right: 11px;
+  // align-items: center;
+  // justify-content: start;
+  padding-left: 24px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1199px) {
+    padding-left: 36px;
+    padding-right: 11px;
+  }
 }
 
 .agreement-conditions__label {
@@ -15,7 +19,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 14px;
+    left: 2px;
     transform: translateY(-50%);
     display: block;
     width: 16px;
@@ -24,6 +28,21 @@
     border-radius: 2px;
     transition: border-color 250ms var(--timing-function),
       background-color 250ms var(--timing-function);
+
+    @media screen and (min-width: 1199px) {
+      eft: 14px;
+    }
+  }
+}
+
+.agreement-conditions__text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1199px) {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 

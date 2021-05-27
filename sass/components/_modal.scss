@@ -4,18 +4,32 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  min-width: 528px;
   background-color: var(--bg-head);
   box-shadow: var(--box-shadow-card);
   border-radius: 4px;
+
+  @media screen and (max-width: 469px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 470px) and (max-width: 1099px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+  }
 }
 
 .modal__title {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  @media screen and (min-width: 1199px) {
+    line-height: 1.15;
+  }
 }
