@@ -7,15 +7,28 @@
 .team-cards-set__item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc((100% - 4 * 30px) / 4);
   box-shadow: var(--box-shadow-card);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
 }
 
 .team-cards-set__content {
   background-color: var(--bg-head);
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
   border-radius: 0px 0px 4px 4px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding: 30px;
+  }
 }
 
 .team-cards-set__title {
