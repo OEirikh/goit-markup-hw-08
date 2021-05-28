@@ -8,11 +8,11 @@
   box-shadow: var(--box-shadow-card);
   border-radius: 4px;
 
-  @media screen and (max-width: 469px) {
-    max-width: 450px;
+  @media screen and (max-width: 450px) {
+    width: 100%;
   }
 
-  @media screen and (min-width: 470px) and (max-width: 1099px) {
+  @media screen and (min-width: 450px) and (max-width: 1199px) {
     width: 450px;
   }
 

@@ -2,6 +2,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-head);
+
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 0px;
@@ -10,13 +11,13 @@
 
 .features__title {
   margin-bottom: 10px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-sub-col);
-  text-align: center;
 
   @media screen and (min-width: 768px) {
     text-align: start;

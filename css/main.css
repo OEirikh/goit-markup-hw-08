@@ -69,7 +69,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 h1,
@@ -267,7 +266,7 @@ body {
   z-index: 19;
   position: fixed;
   top: 0;
-  right: 100%;
+  left: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -275,11 +274,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  transition: right 250ms var(--timing-function);
+  transition: left 250ms var(--timing-function);
 }
 
 .mob-menu.is-open {
-  right: 0;
+  left: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -301,6 +300,10 @@ body {
 }
 
 .mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--acent-col);
+}
+
+.mob-menu__link--curent {
   color: var(--acent-col);
 }
 
@@ -810,13 +813,13 @@ body {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 469px) {
+@media screen and (max-width: 450px) {
   .modal {
-    max-width: 450px;
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 470px) and (max-width: 1099px) {
+@media screen and (min-width: 450px) and (max-width: 1199px) {
   .modal {
     width: 450px;
   }
@@ -985,18 +988,25 @@ body {
   margin-top: -30px;
 }
 
-.portfolio-list__title {
-  margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--title-sub-col);
-}
-
 .portfolio-list__card {
   margin-left: 30px;
   margin-top: 30px;
+  flex-basis: 100%;
+  border-left: 1px solid var(--portfolio-border);
+  border-right: 1px solid var(--portfolio-border);
+  border-bottom: 1px solid var(--portfolio-border);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list__card {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list__card {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .portfolio-list__link {
@@ -1015,9 +1025,15 @@ body {
 
 .portfolio-list__content {
   padding: 20px 24px;
-  border-left: 1px solid var(--portfolio-border);
-  border-right: 1px solid var(--portfolio-border);
-  border-bottom: 1px solid var(--portfolio-border);
+}
+
+.portfolio-list__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-sub-col);
 }
 
 .portfolio-list__text {
@@ -1086,8 +1102,8 @@ body {
 .header__container {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: start;
+  align-items: center;
 }
 
 .hero {
@@ -1142,13 +1158,13 @@ body {
 
 .features__title {
   margin-bottom: 10px;
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-sub-col);
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1191,7 +1207,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
-    text-align: start;
+    justify-content: start;
   }
 }
 
