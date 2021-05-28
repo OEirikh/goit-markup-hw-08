@@ -1217,7 +1217,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
-    justify-content: start;
+    text-align: start;
   }
 }
 
