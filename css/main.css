@@ -275,12 +275,17 @@ body {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  overflow: hidden;
   transition: right 250ms var(--timing-function);
 }
 
 .mob-menu.is-open {
   right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 
 .mob-menu__item-nav:not(:last-child) {
