@@ -9,12 +9,27 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/hero.jpg");
+    url("../images/mobile/hero/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/tablet/hero/hero.jpg");
+  }
+
   @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/desktop/hero/hero.jpg");
     padding-top: 200px;
     padding-bottom: 200px;
   }
